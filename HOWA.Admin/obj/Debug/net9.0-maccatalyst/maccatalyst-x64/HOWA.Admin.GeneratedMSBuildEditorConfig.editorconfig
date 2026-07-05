@@ -1,0 +1,85 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HOWA.Admin
+build_property.ProjectDir = C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Controls/ChatbotWidget.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Controls.ChatbotWidget.xaml
+build_metadata.AdditionalFiles.TargetPath = Controls\ChatbotWidget.xaml
+build_metadata.AdditionalFiles.RelativePath = Controls\ChatbotWidget.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Views/ApprovalsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Views.ApprovalsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ApprovalsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ApprovalsPage.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Views/AttendancePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Views.AttendancePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AttendancePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AttendancePage.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Views/DashboardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Views.DashboardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DashboardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DashboardPage.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Views/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Views.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Admin/Views/ReportsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Admin.Views.ReportsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ReportsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ReportsPage.xaml

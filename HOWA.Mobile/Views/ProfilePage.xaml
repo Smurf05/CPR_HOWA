@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HOWA.Mobile.ViewModels"
+             xmlns:models="clr-namespace:HOWA.Domain.Models;assembly=HOWA.Domain"
+             x:Class="HOWA.Mobile.Views.ProfilePage"
+             Title="My Profile"
+             BackgroundColor="#0F172A">
+
+    <Grid RowDefinitions="Auto, *, Auto" Padding="25" RowSpacing="15">
+        
+        <!-- Profile Info Header Card -->
+        <Border Grid.Row="0" StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="20">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="{Binding FullName}" FontSize="20" FontAttributes="Bold" TextColor="#FFFFFF" />
+                <Label Text="{Binding Username, StringFormat='@{0}'}" FontSize="13" TextColor="#94A3B8" />
+                <Label Text="{Binding Email}" FontSize="13" TextColor="#E2E8F0" />
+                <Label Text="{Binding ContactNo}" FontSize="13" TextColor="#E2E8F0" />
+                <Label Text="{Binding RfidUid, StringFormat='RFID Card: {0}'}" FontSize="12" TextColor="#10B981" FontAttributes="Bold" />
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Attendance History -->
+        <VerticalStackLayout Grid.Row="1" Spacing="10">
+            <Label Text="My Attendance Logs" FontSize="16" FontAttributes="Bold" TextColor="#FFFFFF" />
+            
+            <Border StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="10">
+                <CollectionView ItemsSource="{Binding History}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:AttendanceLog">
+                            <Grid ColumnDefinitions="*, Auto" Padding="8">
+                                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                    <Label Text="{Binding Timestamp, StringFormat='{0:f}'}" TextColor="#E2E8F0" FontSize="13" />
+                                    <Label Text="{Binding Method, StringFormat='Method: {0}'}" TextColor="#94A3B8" FontSize="11" />
+                                </VerticalStackLayout>
+                                <Label Grid.Column="1" Text="{Binding Status}" FontAttributes="Bold" TextColor="#10B981" VerticalOptions="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Border>
+        </VerticalStackLayout>
+
+        <!-- Refresh Command Button -->
+        <Button Grid.Row="2" Text="Refresh Profile" Command="{Binding LoadProfileCommand}" BackgroundColor="#1E293B" TextColor="#E2E8F0" HeightRequest="45" CornerRadius="10" />
+
+    </Grid>
+</ContentPage>

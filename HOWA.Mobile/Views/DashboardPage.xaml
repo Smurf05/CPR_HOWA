@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HOWA.Mobile.ViewModels"
+             xmlns:helpers="clr-namespace:HOWA.Mobile.Helpers"
+             x:Class="HOWA.Mobile.Views.DashboardPage"
+             Title="Attendee Gate"
+             BackgroundColor="#0F172A">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <helpers:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+            
+            <Label Text="{Binding FullName, StringFormat='Peace, {0}'}" FontSize="24" FontAttributes="Bold" TextColor="#FFFFFF" HorizontalOptions="Center" />
+            
+            <!-- Pending banner -->
+            <Border StrokeShape="RoundRectangle 12" Stroke="#F59E0B" BackgroundColor="#1E1B16" Padding="20"
+                    IsVisible="{Binding IsApproved, Converter={StaticResource InvertedBoolConverter}}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="REGISTRATION PENDING" FontAttributes="Bold" TextColor="#F59E0B" HorizontalOptions="Center" />
+                    <Label Text="Your registration has been submitted and is awaiting administrator approval. Once approved, your QR gate pass will be generated here."
+                           TextColor="#E2E8F0" FontSize="13" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Approved QR Card -->
+            <Border StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="25"
+                    IsVisible="{Binding IsApproved}">
+                <VerticalStackLayout Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Worship QR Check-In Pass" FontAttributes="Bold" TextColor="#FFFFFF" FontSize="16" HorizontalOptions="Center" />
+
+                    <!-- The QR Image -->
+                    <Border StrokeThickness="0" BackgroundColor="#FFFFFF" Padding="15" HeightRequest="220" WidthRequest="220" StrokeShape="RoundRectangle 10" HorizontalOptions="Center">
+                        <Image Source="{Binding QrCodeImage}" Aspect="AspectFit" />
+                    </Border>
+
+                    <Label Text="Scan this QR code at the entrance scanner to mark your attendance." TextColor="#94A3B8" FontSize="12" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="Refresh Pass Status" Command="{Binding LoadUserCommand}" BackgroundColor="#10B981" TextColor="#FFFFFF" FontAttributes="Bold" HeightRequest="45" CornerRadius="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

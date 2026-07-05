@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HOWA.Mobile.ViewModels"
+             x:Class="HOWA.Mobile.Views.RegisterPage"
+             Title="Attendee Registration"
+             BackgroundColor="#0F172A">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30">
+            <Label Text="New Account Registration" FontSize="22" FontAttributes="Bold" TextColor="#FFFFFF" HorizontalOptions="Center" />
+            <Label Text="Join Southern Christian College Worship community." FontSize="12" TextColor="#94A3B8" HorizontalOptions="Center" />
+
+            <Border StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="20">
+                <VerticalStackLayout Spacing="12">
+                    <Entry Text="{Binding Username}" Placeholder="Desired Username" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="40" />
+                    <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Password" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="40" />
+                    <Entry Text="{Binding FirstName}" Placeholder="First Name" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="40" />
+                    <Entry Text="{Binding LastName}" Placeholder="Last Name" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="40" />
+                    <Entry Text="{Binding Email}" Placeholder="Email Address" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="40" />
+                    <Entry Text="{Binding ContactNo}" Placeholder="Contact Number" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="40" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="{Binding StatusMessage}" TextColor="#EF4444" FontSize="12" HorizontalOptions="Center" />
+
+            <Button Text="Submit Registration" Command="{Binding RegisterCommand}" BackgroundColor="#10B981" TextColor="#FFFFFF" FontAttributes="Bold" HeightRequest="48" CornerRadius="10" />
+            
+            <Button Text="Back to Log In" Command="{Binding LoginNavCommand}" BackgroundColor="Transparent" TextColor="#94A3B8" FontAttributes="Bold" HeightRequest="48" />
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="#10B981" HeightRequest="40" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

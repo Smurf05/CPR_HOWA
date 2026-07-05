@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HOWA.Admin.Views.DashboardPage"
+    Title="HOWA Control Console"
+    BackgroundColor="#0F172A">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto,Auto,*,Auto"
+              Padding="30"
+              RowSpacing="25">
+
+            <!-- Header -->
+            <HorizontalStackLayout Grid.Row="0"
+                                   Spacing="15"
+                                   VerticalOptions="Center">
+
+                <BoxView Color="#3B82F6"
+                         WidthRequest="6"
+                         HeightRequest="30"
+                         CornerRadius="3"/>
+
+                <Label Text="Live Console"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="White"/>
+
+                <Label Text="{Binding ActiveEvent.EventName, StringFormat='- Active Event: {0}'}"
+                       FontSize="16"
+                       TextColor="#94A3B8"
+                       VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <!-- Statistics -->
+            <Grid Grid.Row="1"
+                  ColumnDefinitions="*,*,*,*"
+                  ColumnSpacing="20"
+                  HeightRequest="120">
+
+                <!-- Approved -->
+                <Border Grid.Column="0"
+                        Stroke="#1E293B"
+                        BackgroundColor="#1E293B"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="20">
+
+                    <VerticalStackLayout VerticalOptions="Center"
+                                         Spacing="5">
+
+                        <Label Text="TOTAL APPROVED"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#94A3B8"/>
+
+                        <Label Text="{Binding TotalRegistered}"
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               TextColor="#3B82F6"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <!-- Present -->
+                <Border Grid.Column="1"
+                        Stroke="#1E293B"
+                        BackgroundColor="#1E293B"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="20">
+
+                    <VerticalStackLayout VerticalOptions="Center"
+                                         Spacing="5">
+
+                        <Label Text="TOTAL PRESENT"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#94A3B8"/>
+
+                        <Label Text="{Binding TotalPresent}"
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               TextColor="#10B981"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <!-- Pending -->
+                <Border Grid.Column="2"
+                        Stroke="#1E293B"
+                        BackgroundColor="#1E293B"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="20">
+
+                    <VerticalStackLayout VerticalOptions="Center"
+                                         Spacing="5">
+
+                        <Label Text="PENDING APPROVALS"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#94A3B8"/>
+
+                        <Label Text="{Binding PendingApprovals}"
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               TextColor="#F59E0B"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <!-- Attendance -->
+                <Border Grid.Column="3"
+                        Stroke="#1E293B"
+                        BackgroundColor="#1E293B"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="20">
+
+                    <VerticalStackLayout VerticalOptions="Center"
+                                         Spacing="5">
+
+                        <Label Text="ATTENDANCE RATE"
+                               FontSize="11"
+                               FontAttributes="Bold"
+                               TextColor="#94A3B8"/>
+
+                        <Label Text="{Binding AttendanceRate, StringFormat='{0}%'}"
+                               FontSize="28"
+                               FontAttributes="Bold"
+                               TextColor="#EC4899"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+            </Grid>
+
+            <!-- Main Content -->
+            <Grid Grid.Row="2"
+                  ColumnDefinitions="*,*"
+                  ColumnSpacing="25">
+
+                <!-- Scanner -->
+                <Border Grid.Column="0"
+                        Stroke="#1E293B"
+                        BackgroundColor="#1E293B"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="25">
+
+                    <VerticalStackLayout Spacing="20">
+
+                        <Label Text="Scanner Simulation Desk"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+
+                        <Label Text="Simulate incoming attendee scans (RFID tag tapping or QR scan)."
+                               FontSize="13"
+                               TextColor="#94A3B8"/>
+
+                        <HorizontalStackLayout Spacing="20">
+
+                            <RadioButton Content="RFID Scan Mode"
+                                         IsChecked="True"/>
+
+                            <RadioButton Content="QR Code Scan Mode"/>
+
+                        </HorizontalStackLayout>
+
+                        <VerticalStackLayout Spacing="8">
+
+                            <Label Text="Scan Payload Value"
+                                   FontSize="12"
+                                   TextColor="#E2E8F0"/>
+
+                            <Entry Text="{Binding SimulatedScanValue}"
+                                   Placeholder="RFID_987654321 / HOWA_QR_TOKEN"
+                                   PlaceholderColor="#475569"
+                                   TextColor="White"
+                                   BackgroundColor="#0F172A"
+                                   HeightRequest="45"/>
+
+                        </VerticalStackLayout>
+
+                        <Button Text="Simulate Device Scan"
+                                Command="{Binding SimulateScanCommand}"
+                                BackgroundColor="#3B82F6"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                CornerRadius="8"
+                                HeightRequest="45"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <!-- System Status -->
+                <Border Grid.Column="1"
+                        Stroke="#1E293B"
+                        BackgroundColor="#1E293B"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="25">
+
+                    <VerticalStackLayout Spacing="15">
+
+                        <Label Text="System Status"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+
+                        <Grid ColumnDefinitions="150,*"
+                              RowDefinitions="Auto,Auto,Auto"
+                              RowSpacing="15">
+
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   Text="Database Connection:"
+                                   TextColor="#94A3B8"/>
+
+                            <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="Connected (LocalDB)"
+                                   FontAttributes="Bold"
+                                   TextColor="#10B981"/>
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Text="Active Event Date:"
+                                   TextColor="#94A3B8"/>
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding ActiveEvent.EventDate, StringFormat='{0:f}'}"
+                                   TextColor="#E2E8F0"/>
+
+                            <Label Grid.Row="2"
+                                   Grid.Column="0"
+                                   Text="RFID Receiver Port:"
+                                   TextColor="#94A3B8"/>
+
+                            <Label Grid.Row="2"
+                                   Grid.Column="1"
+                                   Text="COM3 (Ready)"
+                                   TextColor="#E2E8F0"/>
+
+                        </Grid>
+
+                        <Button Text="Refresh Statistics"
+                                Command="{Binding LoadStatsCommand}"
+                                BackgroundColor="Transparent"
+                                BorderColor="#3B82F6"
+                                BorderWidth="1"
+                                TextColor="#3B82F6"
+                                FontAttributes="Bold"
+                                CornerRadius="8"
+                                HeightRequest="45"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+            </Grid>
+
+            <!-- Footer -->
+            <Label Grid.Row="3"
+                   HorizontalTextAlignment="Center"
+                   Text="HOWA AI Assistant panel is docked globally on the sidebar."
+                   FontSize="11"
+                   TextColor="#64748B"/>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

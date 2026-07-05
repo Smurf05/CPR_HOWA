@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HOWA.Admin.ViewModels"
+             xmlns:dto="clr-namespace:HOWA.Domain.DTOs;assembly=HOWA.Domain"
+             xmlns:helpers="clr-namespace:HOWA.Admin.Helpers"
+             x:Class="HOWA.Admin.Views.ReportsPage"
+             Title="Reports Console"
+             BackgroundColor="#0F172A">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <helpers:StatusToColorConverter x:Key="StatusToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, *, Auto" Padding="30" RowSpacing="20">
+        
+        <!-- Header -->
+        <Grid Grid.Row="0" ColumnDefinitions="*, Auto" ColumnSpacing="20">
+            <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+                <BoxView Color="#EC4899" WidthRequest="6" HeightRequest="30" CornerRadius="3" />
+                <Label Text="Structured Attendance Reports" FontSize="24" FontAttributes="Bold" TextColor="#FFFFFF" />
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout Grid.Column="1" Spacing="15" VerticalOptions="Center">
+                <!-- Dropdown picker for status filtering -->
+                <Picker SelectedItem="{Binding SelectedStatus}" Title="Filter Status" TextColor="#FFFFFF" WidthRequest="150" BackgroundColor="#1E293B">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Present</x:String>
+                            <x:String>Late</x:String>
+                            <x:String>Absent</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Filter &amp; Query" Command="{Binding LoadReportCommand}" BackgroundColor="#1E293B" TextColor="#E2E8F0" HeightRequest="45" />
+                <Button Text="Export CSV" Command="{Binding ExportCsvCommand}" BackgroundColor="#EC4899" TextColor="#FFFFFF" FontAttributes="Bold" HeightRequest="45" />
+            </HorizontalStackLayout>
+        </Grid>
+
+        <!-- Reports grid -->
+        <Border Grid.Row="1" StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="10">
+            <CollectionView ItemsSource="{Binding ReportList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="dto:AttendanceReportDto">
+                        <Grid ColumnDefinitions="*, 150, 180, 100" Padding="12">
+                            <Label Grid.Column="0" Text="{Binding FullName}" FontAttributes="Bold" TextColor="#FFFFFF" FontSize="15" />
+                            <Label Grid.Column="1" Text="{Binding EventName}" TextColor="#94A3B8" FontSize="13" />
+                            <Label Grid.Column="2" Text="{Binding ScannedAt, StringFormat='{0:g}'}" TextColor="#E2E8F0" FontSize="13" />
+                            <Label Grid.Column="3" Text="{Binding AttendanceStatus}" FontAttributes="Bold" TextColor="{Binding AttendanceStatus, Converter={StaticResource StatusToColorConverter}}" FontSize="13" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Border>
+
+        <!-- Loading spinner -->
+        <ActivityIndicator Grid.Row="2" IsRunning="{Binding IsBusy}" Color="#EC4899" HeightRequest="40" />
+    </Grid>
+</ContentPage>

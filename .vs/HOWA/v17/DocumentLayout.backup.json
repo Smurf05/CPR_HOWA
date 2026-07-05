@@ -1,0 +1,370 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\HOWA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/SMURFIIES_SQLEXPRESS/HOWA_Db/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.shared\\configuration\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|solutionrelative:howa.shared\\configuration\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\resources\\raw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\resources\\raw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F431339A-C74E-4325-82B1-2A3741A899D1}|HOWA.Mobile\\HOWA.Mobile.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.mobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F431339A-C74E-4325-82B1-2A3741A899D1}|HOWA.Mobile\\HOWA.Mobile.csproj|solutionrelative:howa.mobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HOWA_Db/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.shared\\utilities\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|solutionrelative:howa.shared\\utilities\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.shared\\constants\\dbconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|solutionrelative:howa.shared\\constants\\dbconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\views\\approvalspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\views\\approvalspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\views\\approvalspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\views\\approvalspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.repository\\repositories\\attendeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|solutionrelative:howa.repository\\repositories\\attendeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.repository\\repositories\\attendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|solutionrelative:howa.repository\\repositories\\attendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|solutionrelative:howa.repository\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.repository\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|solutionrelative:howa.repository\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF2B8FB-B8CB-43F1-8C1A-D0396C34A596}|HOWA.Repository\\HOWA.Repository.csproj|solutionrelative:howa.repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\views\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\views\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\helpers\\converters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\helpers\\converters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/SMURFIIES_SQLEXPRESS/HOWA_Db/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-07-05T11:28:49.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Resources\\Raw\\appsettings.json",
+              "RelativeDocumentMoniker": "HOWA.Admin\\Resources\\Raw\\appsettings.json",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Resources\\Raw\\appsettings.json",
+              "RelativeToolTip": "HOWA.Admin\\Resources\\Raw\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-04T13:32:05.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Configuration\\AppConfiguration.cs",
+              "RelativeDocumentMoniker": "HOWA.Shared\\Configuration\\AppConfiguration.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Configuration\\AppConfiguration.cs",
+              "RelativeToolTip": "HOWA.Shared\\Configuration\\AppConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T10:52:47.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApprovalsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\ApprovalsPage.xaml.cs",
+              "RelativeDocumentMoniker": "HOWA.Admin\\Views\\ApprovalsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\ApprovalsPage.xaml.cs",
+              "RelativeToolTip": "HOWA.Admin\\Views\\ApprovalsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:47:38.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApprovalsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\ApprovalsPage.xaml",
+              "RelativeDocumentMoniker": "HOWA.Admin\\Views\\ApprovalsPage.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\ApprovalsPage.xaml",
+              "RelativeToolTip": "HOWA.Admin\\Views\\ApprovalsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-04T02:47:36.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Mobile\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "HOWA.Mobile\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Mobile\\MauiProgram.cs",
+              "RelativeToolTip": "HOWA.Mobile\\MauiProgram.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:02:08.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "HOWA.Admin\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\MauiProgram.cs",
+              "RelativeToolTip": "HOWA.Admin\\MauiProgram.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:00:57.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DbConstants.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Constants\\DbConstants.cs",
+              "RelativeDocumentMoniker": "HOWA.Shared\\Constants\\DbConstants.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Constants\\DbConstants.cs",
+              "RelativeToolTip": "HOWA.Shared\\Constants\\DbConstants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T10:53:06.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HOWA_Db/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HOWA_Db/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-07-04T11:09:59.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Utilities\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "HOWA.Shared\\Utilities\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Utilities\\PasswordHasher.cs",
+              "RelativeToolTip": "HOWA.Shared\\Utilities\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T11:11:09.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\App.xaml.cs",
+              "RelativeDocumentMoniker": "HOWA.Admin\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\App.xaml.cs",
+              "RelativeToolTip": "HOWA.Admin\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:00:51.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "HOWA.Admin\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "HOWA.Admin\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:43:17.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "HOWA.Admin\\Views\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "HOWA.Admin\\Views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:43:04.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "HOWA.Admin\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\MainPage.xaml.cs",
+              "RelativeToolTip": "HOWA.Admin\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:42:17.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "HOWA.Admin\\Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "HOWA.Admin\\Views\\LoginPage.xaml",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAvwHsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-03T15:04:40.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AttendeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Repositories\\AttendeeRepository.cs",
+              "RelativeDocumentMoniker": "HOWA.Repository\\Repositories\\AttendeeRepository.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Repositories\\AttendeeRepository.cs",
+              "RelativeToolTip": "HOWA.Repository\\Repositories\\AttendeeRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:01:45.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AttendanceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Repositories\\AttendanceRepository.cs",
+              "RelativeDocumentMoniker": "HOWA.Repository\\Repositories\\AttendanceRepository.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Repositories\\AttendanceRepository.cs",
+              "RelativeToolTip": "HOWA.Repository\\Repositories\\AttendanceRepository.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:01:29.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "HOWA.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "HOWA.Repository\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:01:27.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "HOWA.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "HOWA.Repository\\UnitOfWork\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:01:25.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Class1.cs",
+              "RelativeDocumentMoniker": "HOWA.Repository\\Class1.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Class1.cs",
+              "RelativeToolTip": "HOWA.Repository\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T16:01:21.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DashboardPage.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\DashboardPage.xaml",
+              "RelativeDocumentMoniker": "HOWA.Admin\\Views\\DashboardPage.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\DashboardPage.xaml",
+              "RelativeToolTip": "HOWA.Admin\\Views\\DashboardPage.xaml",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAvwBIBAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-03T15:04:22.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Converters.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Helpers\\Converters.cs",
+              "RelativeDocumentMoniker": "HOWA.Admin\\Helpers\\Converters.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Helpers\\Converters.cs",
+              "RelativeToolTip": "HOWA.Admin\\Helpers\\Converters.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAIwEcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T14:58:29.84Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="HOWA.Admin.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:HOWA.Admin.Views"
+    Title="HOWA Admin"
+    Shell.NavBarIsVisible="False"
+    FlyoutBehavior="Disabled">
+
+    <!-- Login — hidden from navigation, shown first -->
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="LoginPage"
+        Shell.TabBarIsVisible="False"
+        Shell.NavBarIsVisible="False"
+        FlyoutItemIsVisible="False" />
+
+    <!-- Main app tabs — shown after login -->
+    <TabBar x:Name="MainTabBar" Shell.TabBarIsVisible="True">
+
+        <Tab Title="Dashboard" Icon="dotnet_bot.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate views:DashboardPage}"
+                Route="DashboardPage" />
+        </Tab>
+
+        <Tab Title="Approvals" Icon="dotnet_bot.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate views:ApprovalsPage}"
+                Route="ApprovalsPage" />
+        </Tab>
+
+        <Tab Title="Attendance" Icon="dotnet_bot.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate views:AttendancePage}"
+                Route="AttendancePage" />
+        </Tab>
+
+        <Tab Title="Reports" Icon="dotnet_bot.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate views:ReportsPage}"
+                Route="ReportsPage" />
+        </Tab>
+
+    </TabBar>
+
+</Shell>
+

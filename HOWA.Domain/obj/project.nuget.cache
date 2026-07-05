@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tQZ+FCVrDjo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Domain\\HOWA.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

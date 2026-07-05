@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HOWA.Admin.ViewModels"
+             xmlns:models="clr-namespace:HOWA.Domain.Models;assembly=HOWA.Domain"
+             xmlns:helpers="clr-namespace:HOWA.Admin.Helpers"
+             x:Class="HOWA.Admin.Views.ApprovalsPage"
+             Title="Pending Registrations Console"
+             BackgroundColor="#0F172A">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <helpers:ObjectNotNullConverter x:Key="ObjectNotNullConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, *, Auto" Padding="30" RowSpacing="20">
+        
+        <!-- Header -->
+        <HorizontalStackLayout Grid.Row="0" Spacing="15" VerticalOptions="Center">
+            <BoxView Color="#F59E0B" WidthRequest="6" HeightRequest="30" CornerRadius="3" />
+            <Label Text="Attendee Approval Desk" FontSize="24" FontAttributes="Bold" TextColor="#FFFFFF" />
+        </HorizontalStackLayout>
+
+        <!-- Main Body: Split in List (left) and Approval panel (right) -->
+        <Grid Grid.Row="1" ColumnDefinitions="2*, *" ColumnSpacing="25">
+            
+            <!-- Pending list -->
+            <Border Grid.Column="0" StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="15">
+                <CollectionView ItemsSource="{Binding PendingList}" 
+                                SelectedItem="{Binding SelectedAttendee}"
+                                SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Attendee">
+                            <Grid ColumnDefinitions="*, *" Padding="10">
+                                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                    <Label Text="{Binding UserDetails.FullName}" FontAttributes="Bold" TextColor="#FFFFFF" FontSize="15" />
+                                    <Label Text="{Binding UserDetails.Username, StringFormat='@{0}'}" TextColor="#94A3B8" FontSize="12" />
+                                </VerticalStackLayout>
+                                <Label Grid.Column="1" Text="{Binding UserDetails.Email}" TextColor="#E2E8F0" FontSize="13" VerticalOptions="Center" HorizontalOptions="End" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Border>
+
+            <!-- Actions Panel for Selected -->
+            <Border Grid.Column="1" StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="25">
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Approval Form" FontSize="18" FontAttributes="Bold" TextColor="#FFFFFF" />
+                    
+                    <Label Text="{Binding SelectedAttendee.UserDetails.FullName, StringFormat='Assigning RFID for: {0}'}" 
+                           FontAttributes="Bold" TextColor="#E2E8F0" FontSize="14" IsVisible="{Binding SelectedAttendee, Converter={StaticResource ObjectNotNullConverter}}" />
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Assign RFID Tag UID" TextColor="#94A3B8" FontSize="12" />
+                        <Entry Text="{Binding RfidInput}" Placeholder="RFID_765432109" PlaceholderColor="#475569" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="45" />
+                    </VerticalStackLayout>
+
+                    <Button Text="Approve &amp; Link" 
+                            Command="{Binding ApproveCommand}" 
+                            CommandParameter="{Binding SelectedAttendee}"
+                            BackgroundColor="#10B981" 
+                            TextColor="#FFFFFF" 
+                            FontAttributes="Bold" 
+                            CornerRadius="8" 
+                            HeightRequest="45" />
+
+                    <Button Text="Reject Request" 
+                            Command="{Binding RejectCommand}" 
+                            CommandParameter="{Binding SelectedAttendee}"
+                            BackgroundColor="#EF4444" 
+                            TextColor="#FFFFFF" 
+                            FontAttributes="Bold" 
+                            CornerRadius="8" 
+                            HeightRequest="45" />
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+
+        <!-- Status footer -->
+        <ActivityIndicator Grid.Row="2" IsRunning="{Binding IsBusy}" Color="#3B82F6" HeightRequest="40" />
+    </Grid>
+</ContentPage>

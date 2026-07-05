@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:HOWA.Admin.ViewModels"
+    xmlns:helpers="clr-namespace:HOWA.Admin.Helpers"
+    x:Class="HOWA.Admin.Views.LoginPage"
+    Title="HOWA Login Center"
+    BackgroundColor="#121824">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <helpers:StringNotNullOrEmptyConverter
+                x:Key="StringNotNullOrEmptyConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+
+        <ScrollView VerticalOptions="Center">
+
+            <VerticalStackLayout
+                Spacing="25"
+                Padding="40"
+                HorizontalOptions="Center"
+                WidthRequest="450">
+
+                <Image
+                    Source="dotnet_bot.png"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"/>
+
+                <Label
+                    Text="HOWA Control Center"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center"/>
+
+                <Label
+                    Text="House Of Worship Attendance System"
+                    FontSize="14"
+                    TextColor="#94A3B8"
+                    HorizontalOptions="Center"/>
+
+                <Border
+                    Stroke="#1E293B"
+                    BackgroundColor="#1E293B"
+                    Padding="15">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout Spacing="15">
+
+                        <VerticalStackLayout Spacing="5">
+
+                            <Label
+                                Text="Username"
+                                TextColor="#E2E8F0"
+                                FontSize="12"/>
+
+                            <Entry
+                                Text="{Binding Username}"
+                                Placeholder="Enter admin username"
+                                PlaceholderColor="#64748B"
+                                TextColor="White"
+                                BackgroundColor="#0F172A"
+                                HeightRequest="45"/>
+
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Spacing="5">
+
+                            <Label
+                                Text="Password"
+                                TextColor="#E2E8F0"
+                                FontSize="12"/>
+
+                            <Entry
+                                Text="{Binding Password}"
+                                IsPassword="True"
+                                Placeholder="••••••••"
+                                PlaceholderColor="#64748B"
+                                TextColor="White"
+                                BackgroundColor="#0F172A"
+                                HeightRequest="45"/>
+
+                        </VerticalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <Label
+                    Text="{Binding ErrorMessage}"
+                    TextColor="#EF4444"
+                    FontSize="13"
+                    HorizontalOptions="Center"
+                    IsVisible="{Binding ErrorMessage, Converter={StaticResource StringNotNullOrEmptyConverter}}"/>
+
+                <Button
+                    Text="Login to Dashboard"
+                    Command="{Binding LoginCommand}"
+                    BackgroundColor="#3B82F6"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HeightRequest="50"
+                    CornerRadius="10"/>
+
+                <ActivityIndicator
+                    IsRunning="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    Color="#3B82F6"
+                    HeightRequest="40"/>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

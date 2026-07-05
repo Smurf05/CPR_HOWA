@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:HOWA.Mobile.ViewModels"
+             x:Class="HOWA.Mobile.Views.LoginPage"
+             Title="HOWA Attendee Portal"
+             BackgroundColor="#0F172A">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+            
+            <Image Source="dotnet_bot.png" HeightRequest="120" HorizontalOptions="Center" />
+
+            <Label Text="HOWA Attendee Gate" FontSize="26" FontAttributes="Bold" TextColor="#FFFFFF" HorizontalOptions="Center" />
+            <Label Text="Scan. Approve. Worship." FontSize="13" TextColor="#94A3B8" HorizontalOptions="Center" />
+
+            <Border StrokeShape="RoundRectangle 12" Stroke="#1E293B" BackgroundColor="#1E293B" Padding="20">
+                <VerticalStackLayout Spacing="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Username" TextColor="#E2E8F0" FontSize="12" />
+                        <Entry Text="{Binding Username}" Placeholder="Enter attendee username" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="45" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Password" TextColor="#E2E8F0" FontSize="12" />
+                        <Entry Text="{Binding Password}" IsPassword="True" Placeholder="••••••••" PlaceholderColor="#64748B" TextColor="#FFFFFF" BackgroundColor="#0F172A" HeightRequest="45" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="{Binding ErrorMessage}" TextColor="#EF4444" FontSize="12" HorizontalOptions="Center" />
+
+            <Button Text="Login to Portal" Command="{Binding LoginCommand}" BackgroundColor="#10B981" TextColor="#FFFFFF" FontAttributes="Bold" HeightRequest="48" CornerRadius="10" />
+            
+            <Button Text="Create Attendance Account" Command="{Binding RegisterNavCommand}" BackgroundColor="Transparent" TextColor="#10B981" FontAttributes="Bold" HeightRequest="48" />
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="#10B981" HeightRequest="40" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

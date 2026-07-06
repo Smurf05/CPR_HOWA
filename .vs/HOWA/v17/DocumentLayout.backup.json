@@ -3,15 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\HOWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/SMURFIIES_SQLEXPRESS/HOWA_Db/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\resources\\raw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\resources\\raw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.shared\\configuration\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3370548-15F2-4F7A-A1C5-8C580E8E622A}|HOWA.Shared\\HOWA.Shared.csproj|solutionrelative:howa.shared\\configuration\\appconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.admin\\resources\\raw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{381E45DC-4C3C-4697-BDC9-5CACBAB6E8BD}|HOWA.Admin\\HOWA.Admin.csproj|solutionrelative:howa.admin\\resources\\raw\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F431339A-C74E-4325-82B1-2A3741A899D1}|HOWA.Mobile\\HOWA.Mobile.csproj|c:\\users\\lenovo\\desktop\\howa\\howa.mobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -96,25 +93,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.Users [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/SMURFIIES_SQLEXPRESS/HOWA_Db/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "dbo.Users [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-07-05T11:28:49.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Resources\\Raw\\appsettings.json",
               "RelativeDocumentMoniker": "HOWA.Admin\\Resources\\Raw\\appsettings.json",
@@ -122,7 +105,13 @@
               "RelativeToolTip": "HOWA.Admin\\Resources\\Raw\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-04T13:32:05.546Z"
+              "WhenOpened": "2026-07-04T13:32:05.546Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -134,12 +123,11 @@
               "RelativeToolTip": "HOWA.Shared\\Configuration\\AppConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T10:52:47.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-04T10:52:47.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ApprovalsPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\ApprovalsPage.xaml.cs",
               "RelativeDocumentMoniker": "HOWA.Admin\\Views\\ApprovalsPage.xaml.cs",
@@ -151,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "ApprovalsPage.xaml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\ApprovalsPage.xaml",
               "RelativeDocumentMoniker": "HOWA.Admin\\Views\\ApprovalsPage.xaml",
@@ -163,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Mobile\\MauiProgram.cs",
               "RelativeDocumentMoniker": "HOWA.Mobile\\MauiProgram.cs",
@@ -175,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\MauiProgram.cs",
               "RelativeDocumentMoniker": "HOWA.Admin\\MauiProgram.cs",
@@ -187,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "DbConstants.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Constants\\DbConstants.cs",
               "RelativeDocumentMoniker": "HOWA.Shared\\Constants\\DbConstants.cs",
@@ -199,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "dbo.Users.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HOWA_Db/True/SqlTable/dbo.Users.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HOWA_Db/True/SqlTable/dbo.Users.sql",
@@ -208,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Shared\\Utilities\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "HOWA.Shared\\Utilities\\PasswordHasher.cs",
@@ -220,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\App.xaml.cs",
               "RelativeDocumentMoniker": "HOWA.Admin\\App.xaml.cs",
@@ -232,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "HOWA.Admin\\ViewModels\\LoginViewModel.cs",
@@ -244,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "LoginPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\LoginPage.xaml.cs",
               "RelativeDocumentMoniker": "HOWA.Admin\\Views\\LoginPage.xaml.cs",
@@ -256,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "HOWA.Admin\\MainPage.xaml.cs",
@@ -268,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "LoginPage.xaml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\LoginPage.xaml",
               "RelativeDocumentMoniker": "HOWA.Admin\\Views\\LoginPage.xaml",
@@ -280,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "AttendeeRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Repositories\\AttendeeRepository.cs",
               "RelativeDocumentMoniker": "HOWA.Repository\\Repositories\\AttendeeRepository.cs",
@@ -292,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "AttendanceRepository.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Repositories\\AttendanceRepository.cs",
               "RelativeDocumentMoniker": "HOWA.Repository\\Repositories\\AttendanceRepository.cs",
@@ -304,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\UnitOfWork\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "HOWA.Repository\\UnitOfWork\\UnitOfWork.cs",
@@ -316,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\UnitOfWork\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "HOWA.Repository\\UnitOfWork\\IUnitOfWork.cs",
@@ -328,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Repository\\Class1.cs",
               "RelativeDocumentMoniker": "HOWA.Repository\\Class1.cs",
@@ -340,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "DashboardPage.xaml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Views\\DashboardPage.xaml",
               "RelativeDocumentMoniker": "HOWA.Admin\\Views\\DashboardPage.xaml",
@@ -352,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "Converters.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\HOWA\\HOWA.Admin\\Helpers\\Converters.cs",
               "RelativeDocumentMoniker": "HOWA.Admin\\Helpers\\Converters.cs",

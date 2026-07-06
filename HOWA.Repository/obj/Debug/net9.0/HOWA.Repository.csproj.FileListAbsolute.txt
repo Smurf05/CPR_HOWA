@@ -32,3 +32,4 @@ c:\Users\LENOVO\Desktop\HOWA\HOWA.Repository\obj\Debug\net9.0\HOWA.Repository.As
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Repository\obj\Debug\net9.0\HOWA.Repository.csproj.CoreCompileInputs.cache
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Repository\obj\Debug\net9.0\HOWA.Rep.920046EC.Up2Date
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Repository\obj\Debug\net9.0\ref\HOWA.Repository.dll
+c:\Users\LENOVO\Desktop\HOWA\HOWA.Repository\obj\Debug\net9.0\HOWA.Repository.sourcelink.json

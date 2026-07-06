@@ -4,6 +4,22 @@
         <name>HOWA.Mobile</name>
     </assembly>
     <members>
+        <member name="M:HOWA.Mobile.ViewModels.OtpViewModel.SetOtpId(System.Int32)">
+            <summary>Called by the page — sets the OTP id from navigation param.</summary>
+        </member>
+        <member name="M:HOWA.Mobile.ViewModels.OtpViewModel.SetCode(System.String)">
+            <summary>Called by the page — pre-fills the code field from navigation param.</summary>
+        </member>
+        <member name="P:HOWA.Mobile.Views.OtpPage.OtpId">
+            <summary>Receives the OtpId from navigation query.</summary>
+        </member>
+        <member name="P:HOWA.Mobile.Views.OtpPage.OtpCode">
+            <summary>
+            Receives the pre-filled code from navigation query so the
+            attendee sees the 6-digit code already entered — they just
+            tap Confirm.
+            </summary>
+        </member>
         <member name="T:HOWA.Mobile.Resource">
             <summary>
             Android Resource Designer class.

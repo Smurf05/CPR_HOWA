@@ -21,3 +21,4 @@ c:\Users\LENOVO\Desktop\HOWA\HOWA.Shared\bin\Debug\net9.0\HOWA.Shared.deps.json
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Shared\bin\Debug\net9.0\HOWA.Shared.dll
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Shared\bin\Debug\net9.0\HOWA.Shared.pdb
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Shared\obj\Debug\net9.0\ref\HOWA.Shared.dll
+c:\Users\LENOVO\Desktop\HOWA\HOWA.Shared\obj\Debug\net9.0\HOWA.Shared.sourcelink.json

@@ -55,12 +55,14 @@ public static class MauiProgram
 		builder.Services.AddTransient<RegisterViewModel>();
 		builder.Services.AddTransient<DashboardViewModel>();
 		builder.Services.AddTransient<ProfileViewModel>();
+		builder.Services.AddTransient<OtpViewModel>();
 
 		// Register Views
 		builder.Services.AddTransient<LoginPage>();
 		builder.Services.AddTransient<RegisterPage>();
 		builder.Services.AddTransient<DashboardPage>();
 		builder.Services.AddTransient<ProfilePage>();
+		builder.Services.AddTransient<OtpPage>();
 
 		var app = builder.Build();
 

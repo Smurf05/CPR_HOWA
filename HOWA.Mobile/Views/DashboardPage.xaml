@@ -39,7 +39,7 @@
                         <Image Source="{Binding QrCodeImage}" Aspect="AspectFit" />
                     </Border>
 
-                    <Label Text="Scan this QR code at the entrance scanner to mark your attendance." TextColor="#94A3B8" FontSize="12" HorizontalTextAlignment="Center" />
+                    <Label Text="Scan this QR code at the entrance scanner. When your card or QR is scanned, this screen will automatically open the OTP confirmation." TextColor="#94A3B8" FontSize="12" HorizontalTextAlignment="Center" />
                 </VerticalStackLayout>
             </Border>
 

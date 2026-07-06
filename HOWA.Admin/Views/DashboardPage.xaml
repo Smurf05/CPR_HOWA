@@ -160,27 +160,18 @@
                                TextColor="#94A3B8"/>
 
                         <HorizontalStackLayout Spacing="20">
-
-                            <RadioButton Content="RFID Scan Mode"
-                                         IsChecked="True"/>
-
+                            <RadioButton Content="RFID Scan Mode" IsChecked="True"/>
                             <RadioButton Content="QR Code Scan Mode"/>
-
                         </HorizontalStackLayout>
 
                         <VerticalStackLayout Spacing="8">
-
-                            <Label Text="Scan Payload Value"
-                                   FontSize="12"
-                                   TextColor="#E2E8F0"/>
-
+                            <Label Text="Scan Payload Value" FontSize="12" TextColor="#E2E8F0"/>
                             <Entry Text="{Binding SimulatedScanValue}"
                                    Placeholder="RFID_987654321 / HOWA_QR_TOKEN"
                                    PlaceholderColor="#475569"
                                    TextColor="White"
                                    BackgroundColor="#0F172A"
                                    HeightRequest="45"/>
-
                         </VerticalStackLayout>
 
                         <Button Text="Simulate Device Scan"
@@ -190,6 +181,50 @@
                                 FontAttributes="Bold"
                                 CornerRadius="8"
                                 HeightRequest="45"/>
+
+                        <!-- OTP Result Panel — shown after scan -->
+                        <Border StrokeShape="RoundRectangle 10"
+                                Stroke="#10B981"
+                                BackgroundColor="#0D2B22"
+                                Padding="20"
+                                IsVisible="{Binding OtpVisible}">
+                            <VerticalStackLayout Spacing="12">
+
+                                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                                    <Label Text="🔐" FontSize="20"/>
+                                    <Label Text="OTP SENT TO ATTENDEE'S PHONE"
+                                           FontAttributes="Bold"
+                                           TextColor="#10B981"
+                                           FontSize="13"
+                                           VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+
+                                <Label Text="Backup code (if attendee's app is closed):"
+                                       FontSize="11"
+                                       TextColor="#94A3B8"
+                                       HorizontalOptions="Center"/>
+
+                                <!-- Big OTP code display -->
+                                <Label Text="{Binding OtpCode}"
+                                       FontSize="48"
+                                       FontAttributes="Bold"
+                                       TextColor="#FFFFFF"
+                                       HorizontalOptions="Center"
+                                       CharacterSpacing="8"/>
+
+                                <Label Text="{Binding OtpInfo}"
+                                       FontSize="12"
+                                       TextColor="#94A3B8"
+                                       HorizontalTextAlignment="Center"/>
+
+                                <Button Text="Dismiss"
+                                        Command="{Binding DismissOtpCommand}"
+                                        BackgroundColor="#1E293B"
+                                        TextColor="#94A3B8"
+                                        CornerRadius="6"
+                                        HeightRequest="36"/>
+                            </VerticalStackLayout>
+                        </Border>
 
                     </VerticalStackLayout>
 

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HOWA.Mobile.Views.OtpPage"
+             Title="OTP Verification"
+             BackgroundColor="#0F172A">
+
+    <ScrollView VerticalOptions="Center">
+        <VerticalStackLayout Spacing="30" Padding="40" HorizontalOptions="Center" WidthRequest="360">
+
+            <!-- Icon + Header -->
+            <Label Text="🔐" FontSize="56" HorizontalOptions="Center"/>
+
+            <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                <Label Text="Enter OTP Code"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       TextColor="#FFFFFF"
+                       HorizontalOptions="Center"/>
+                <Label Text="Type the 6-digit code shown on the scanner screen."
+                       FontSize="13"
+                       TextColor="#94A3B8"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <!-- OTP input -->
+            <Border StrokeShape="RoundRectangle 12"
+                    Stroke="#1E293B"
+                    BackgroundColor="#1E293B"
+                    Padding="20">
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Verification Code" TextColor="#E2E8F0" FontSize="12"/>
+
+                    <Entry x:Name="OtpEntry"
+                           Text="{Binding OtpCode}"
+                           Placeholder="000000"
+                           PlaceholderColor="#475569"
+                           TextColor="#FFFFFF"
+                           BackgroundColor="#0F172A"
+                           Keyboard="Numeric"
+                           MaxLength="6"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           HeightRequest="65"
+                           CharacterSpacing="8"/>
+
+                    <Label Text="Code is valid for 5 minutes after the scan."
+                           FontSize="11"
+                           TextColor="#64748B"
+                           HorizontalTextAlignment="Center"/>
+
+                    <!-- Live countdown -->
+                    <Label Text="{Binding CountdownText}"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#F59E0B"
+                           HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Verify Button -->
+            <Button Text="Confirm Check-In"
+                    Command="{Binding VerifyCommand}"
+                    BackgroundColor="#10B981"
+                    TextColor="#FFFFFF"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HeightRequest="52"
+                    CornerRadius="12"/>
+
+            <!-- Result Banner -->
+            <Border StrokeShape="RoundRectangle 12"
+                    Padding="20"
+                    IsVisible="{Binding ResultVisible}">
+                <Border.Triggers>
+                    <DataTrigger TargetType="Border" Binding="{Binding IsSuccess}" Value="True">
+                        <Setter Property="Stroke"          Value="#10B981"/>
+                        <Setter Property="BackgroundColor" Value="#0D2B22"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Border" Binding="{Binding IsSuccess}" Value="False">
+                        <Setter Property="Stroke"          Value="#EF4444"/>
+                        <Setter Property="BackgroundColor" Value="#2B0D0D"/>
+                    </DataTrigger>
+                </Border.Triggers>
+                <Label Text="{Binding ResultMessage}"
+                       FontAttributes="Bold"
+                       FontSize="15"
+                       HorizontalTextAlignment="Center">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label" Binding="{Binding IsSuccess}" Value="True">
+                            <Setter Property="TextColor" Value="#10B981"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Label" Binding="{Binding IsSuccess}" Value="False">
+                            <Setter Property="TextColor" Value="#EF4444"/>
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+            </Border>
+
+            <!-- Busy indicator -->
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               Color="#10B981"
+                               HeightRequest="40"/>
+
+            <!-- Back link -->
+            <Button Text="Back to Dashboard"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="#64748B"
+                    FontSize="13"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

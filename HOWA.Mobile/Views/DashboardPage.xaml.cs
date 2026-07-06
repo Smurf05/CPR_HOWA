@@ -15,7 +15,13 @@ namespace HOWA.Mobile.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            await _viewModel.LoadUserAsync();
+            await _viewModel.StartAsync(); // loads user + starts OTP polling
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            _viewModel.StopPolling(); // cancel background poll when leaving page
         }
     }
 }

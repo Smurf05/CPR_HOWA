@@ -22,3 +22,4 @@ c:\Users\LENOVO\Desktop\HOWA\HOWA.Domain\obj\Debug\net9.0\HOWA.Domain.dll
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Domain\obj\Debug\net9.0\refint\HOWA.Domain.dll
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Domain\obj\Debug\net9.0\HOWA.Domain.pdb
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Domain\obj\Debug\net9.0\ref\HOWA.Domain.dll
+c:\Users\LENOVO\Desktop\HOWA\HOWA.Domain\obj\Debug\net9.0\HOWA.Domain.sourcelink.json

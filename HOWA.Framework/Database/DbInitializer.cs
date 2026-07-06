@@ -142,6 +142,25 @@ namespace HOWA.Framework.Database
                         CONSTRAINT [UQ_Attendance_Attendee_Event] UNIQUE ([AttendeeId], [EventId])
                     );
                     CREATE NONCLUSTERED INDEX [IX_AttendanceLogs_Timestamp] ON [dbo].[AttendanceLogs]([Timestamp] ASC);
+                END",
+
+                // OtpTokens — issued on scan, verified by attendee
+                @"IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'OtpTokens' AND schema_id = SCHEMA_ID('dbo'))
+                BEGIN
+                    CREATE TABLE [dbo].[OtpTokens] (
+                        [OtpId]       INT           IDENTITY(1,1) NOT NULL,
+                        [AttendeeId]  INT           NOT NULL,
+                        [EventId]     INT           NOT NULL,
+                        [Code]        NVARCHAR(6)   NOT NULL,
+                        [Method]      NVARCHAR(20)  NOT NULL,
+                        [IssuedAt]    DATETIME      NOT NULL CONSTRAINT [DF_OtpTokens_IssuedAt]  DEFAULT GETDATE(),
+                        [ExpiresAt]   DATETIME      NOT NULL,
+                        [IsUsed]      BIT           NOT NULL CONSTRAINT [DF_OtpTokens_IsUsed]    DEFAULT 0,
+                        CONSTRAINT [PK_OtpTokens] PRIMARY KEY CLUSTERED ([OtpId] ASC),
+                        CONSTRAINT [FK_OtpTokens_Attendees] FOREIGN KEY ([AttendeeId]) REFERENCES [dbo].[Attendees]([AttendeeId]) ON DELETE CASCADE,
+                        CONSTRAINT [FK_OtpTokens_Events]    FOREIGN KEY ([EventId])    REFERENCES [dbo].[Events]([EventId])    ON DELETE CASCADE
+                    );
+                    CREATE NONCLUSTERED INDEX [IX_OtpTokens_ExpiresAt] ON [dbo].[OtpTokens]([ExpiresAt] ASC);
                 END"
             };
 
@@ -380,6 +399,155 @@ namespace HOWA.Framework.Database
                         ISNULL(@TotalPresent,     0)    AS [TotalPresent],
                         ISNULL(@PendingApprovals, 0)    AS [PendingApprovals],
                         ISNULL(@AttendanceRate,   0.00) AS [AttendanceRate];
+                END;",
+
+                // sp_IssueOtp -------------------------------------------
+                @"IF OBJECT_ID('dbo.sp_IssueOtp', 'P') IS NOT NULL
+                    DROP PROCEDURE [dbo].[sp_IssueOtp];",
+
+                @"CREATE PROCEDURE [dbo].[sp_IssueOtp]
+                    @ScanValue  NVARCHAR(255),
+                    @EventId    INT,
+                    @Method     NVARCHAR(20),
+                    @OtpId      INT          OUTPUT,
+                    @Code       NVARCHAR(6)  OUTPUT
+                AS
+                BEGIN
+                    SET NOCOUNT ON;
+
+                    -- 1. Resolve attendee
+                    DECLARE @AttendeeId     INT          = NULL;
+                    DECLARE @AttendeeStatus NVARCHAR(20) = NULL;
+
+                    IF @Method = 'RFID'
+                        SELECT @AttendeeId = [AttendeeId], @AttendeeStatus = [Status]
+                        FROM [dbo].[Attendees] WHERE [RfidUid] = @ScanValue;
+                    ELSE IF @Method = 'QR'
+                        SELECT @AttendeeId = [AttendeeId], @AttendeeStatus = [Status]
+                        FROM [dbo].[Attendees] WHERE [QrCodeData] = @ScanValue;
+
+                    IF @AttendeeId IS NULL
+                    BEGIN
+                        RAISERROR('Attendee not found for the provided scan value.', 16, 1);
+                        RETURN;
+                    END
+
+                    IF @AttendeeStatus <> 'Approved'
+                    BEGIN
+                        RAISERROR('Attendee is not approved. Status: %s.', 16, 1, @AttendeeStatus);
+                        RETURN;
+                    END
+
+                    IF NOT EXISTS (SELECT 1 FROM [dbo].[Events] WHERE [EventId] = @EventId)
+                    BEGIN
+                        RAISERROR('Event not found.', 16, 1);
+                        RETURN;
+                    END
+
+                    -- 2. Expire any existing unused OTPs for this attendee+event
+                    UPDATE [dbo].[OtpTokens]
+                    SET [IsUsed] = 1
+                    WHERE [AttendeeId] = @AttendeeId
+                      AND [EventId]    = @EventId
+                      AND [IsUsed]     = 0;
+
+                    -- 3. Generate a 6-digit code using random number
+                    SET @Code = RIGHT('000000' + CAST(ABS(CHECKSUM(NEWID())) % 1000000 AS NVARCHAR(6)), 6);
+
+                    -- 4. Insert OTP with 5-minute expiry
+                    INSERT INTO [dbo].[OtpTokens] ([AttendeeId],[EventId],[Code],[Method],[IssuedAt],[ExpiresAt],[IsUsed])
+                    VALUES (@AttendeeId, @EventId, @Code, @Method, GETDATE(), DATEADD(minute, 5, GETDATE()), 0);
+
+                    SET @OtpId = SCOPE_IDENTITY();
+                END;",
+
+                // sp_VerifyOtp ------------------------------------------
+                @"IF OBJECT_ID('dbo.sp_VerifyOtp', 'P') IS NOT NULL
+                    DROP PROCEDURE [dbo].[sp_VerifyOtp];",
+
+                @"CREATE PROCEDURE [dbo].[sp_VerifyOtp]
+                    @OtpId   INT,
+                    @Code    NVARCHAR(6),
+                    @Success BIT          OUTPUT,
+                    @LogId   INT          OUTPUT,
+                    @Status  NVARCHAR(20) OUTPUT,
+                    @Message NVARCHAR(255) OUTPUT
+                AS
+                BEGIN
+                    SET NOCOUNT ON;
+                    SET @Success = 0;
+                    SET @LogId   = 0;
+                    SET @Status  = '';
+                    SET @Message = '';
+
+                    -- 1. Fetch the OTP record
+                    DECLARE @AttendeeId INT, @EventId INT, @StoredCode NVARCHAR(6),
+                            @ExpiresAt DATETIME, @IsUsed BIT, @Method NVARCHAR(20);
+
+                    SELECT @AttendeeId = [AttendeeId], @EventId = [EventId],
+                           @StoredCode = [Code], @ExpiresAt = [ExpiresAt],
+                           @IsUsed = [IsUsed], @Method = [Method]
+                    FROM [dbo].[OtpTokens]
+                    WHERE [OtpId] = @OtpId;
+
+                    IF @AttendeeId IS NULL
+                    BEGIN
+                        SET @Message = 'Invalid OTP reference.';
+                        RETURN;
+                    END
+
+                    IF @IsUsed = 1
+                    BEGIN
+                        SET @Message = 'OTP has already been used.';
+                        RETURN;
+                    END
+
+                    IF GETDATE() > @ExpiresAt
+                    BEGIN
+                        SET @Message = 'OTP has expired. Please scan again.';
+                        UPDATE [dbo].[OtpTokens] SET [IsUsed] = 1 WHERE [OtpId] = @OtpId;
+                        RETURN;
+                    END
+
+                    IF @StoredCode <> @Code
+                    BEGIN
+                        SET @Message = 'Incorrect OTP code. Please try again.';
+                        RETURN;
+                    END
+
+                    -- 2. Mark OTP as used
+                    UPDATE [dbo].[OtpTokens] SET [IsUsed] = 1 WHERE [OtpId] = @OtpId;
+
+                    -- 3. Check for duplicate attendance
+                    IF EXISTS (SELECT 1 FROM [dbo].[AttendanceLogs]
+                               WHERE [AttendeeId] = @AttendeeId AND [EventId] = @EventId)
+                    BEGIN
+                        SELECT @LogId = [LogId], @Status = [Status]
+                        FROM [dbo].[AttendanceLogs]
+                        WHERE [AttendeeId] = @AttendeeId AND [EventId] = @EventId;
+                        SET @Success = 1;
+                        SET @Message = 'Already checked in for this event.';
+                        RETURN;
+                    END
+
+                    -- 4. Determine Present vs Late
+                    DECLARE @EventDate DATETIME;
+                    SELECT @EventDate = [EventDate] FROM [dbo].[Events] WHERE [EventId] = @EventId;
+
+                    IF GETDATE() <= DATEADD(minute, 15, @EventDate)
+                        SET @Status = 'Present';
+                    ELSE
+                        SET @Status = 'Late';
+
+                    -- 5. Log attendance
+                    INSERT INTO [dbo].[AttendanceLogs]
+                        ([AttendeeId],[EventId],[Timestamp],[Method],[Status])
+                    VALUES
+                        (@AttendeeId, @EventId, GETDATE(), @Method, @Status);
+
+                    SET @LogId   = SCOPE_IDENTITY();
+                    SET @Success = 1;
+                    SET @Message = 'Check-in confirmed. Status: ' + @Status;
                 END;"
             };
 

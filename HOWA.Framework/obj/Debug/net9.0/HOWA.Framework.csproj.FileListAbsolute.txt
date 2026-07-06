@@ -36,3 +36,4 @@ c:\Users\LENOVO\Desktop\HOWA\HOWA.Framework\obj\Debug\net9.0\HOWA.Framework.Asse
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Framework\obj\Debug\net9.0\HOWA.Framework.csproj.CoreCompileInputs.cache
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Framework\obj\Debug\net9.0\HOWA.Fra.A450A307.Up2Date
 c:\Users\LENOVO\Desktop\HOWA\HOWA.Framework\obj\Debug\net9.0\ref\HOWA.Framework.dll
+c:\Users\LENOVO\Desktop\HOWA\HOWA.Framework\obj\Debug\net9.0\HOWA.Framework.sourcelink.json

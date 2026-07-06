@@ -14,6 +14,8 @@ namespace HOWA.Shared.Constants
         public const string SpApproveAttendee   = "sp_ApproveAttendee";
         public const string SpLogAttendance     = "sp_LogAttendance";
         public const string SpGetDashboardStats = "sp_GetDashboardStats";
+        public const string SpIssueOtp          = "sp_IssueOtp";
+        public const string SpVerifyOtp         = "sp_VerifyOtp";
 
         // ----------------------------------------------------------------
         // View Names

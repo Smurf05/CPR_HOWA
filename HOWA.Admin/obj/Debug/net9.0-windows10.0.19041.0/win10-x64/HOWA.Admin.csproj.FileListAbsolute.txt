@@ -1127,3 +1127,4 @@ C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-windows10.0.19041.0\win
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\HOWA.Admin.sourcelink.json

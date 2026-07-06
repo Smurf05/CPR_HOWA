@@ -5,7 +5,7 @@
              xmlns:models="clr-namespace:HOWA.Domain.Models;assembly=HOWA.Domain"
              xmlns:helpers="clr-namespace:HOWA.Admin.Helpers"
              x:Class="HOWA.Admin.Views.ApprovalsPage"
-             Title="Pending Registrations Console"
+             Title="Registrations Console"
              BackgroundColor="#0F172A">
 
     <ContentPage.Resources>
@@ -32,12 +32,35 @@
                                 SelectionMode="Single">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="models:Attendee">
-                            <Grid ColumnDefinitions="*, *" Padding="10">
+                            <Grid ColumnDefinitions="*, Auto" Padding="10">
                                 <VerticalStackLayout Grid.Column="0" Spacing="2">
                                     <Label Text="{Binding UserDetails.FullName}" FontAttributes="Bold" TextColor="#FFFFFF" FontSize="15" />
                                     <Label Text="{Binding UserDetails.Username, StringFormat='@{0}'}" TextColor="#94A3B8" FontSize="12" />
+                                    <Label Text="{Binding UserDetails.Email}" TextColor="#64748B" FontSize="11" />
                                 </VerticalStackLayout>
-                                <Label Grid.Column="1" Text="{Binding UserDetails.Email}" TextColor="#E2E8F0" FontSize="13" VerticalOptions="Center" HorizontalOptions="End" />
+                                <!-- Status badge -->
+                                <Border Grid.Column="1" StrokeShape="RoundRectangle 6" Padding="8,4" VerticalOptions="Center">
+                                    <Border.Triggers>
+                                        <DataTrigger TargetType="Border" Binding="{Binding Status}" Value="Pending">
+                                            <Setter Property="BackgroundColor" Value="#1E1B10"/>
+                                            <Setter Property="Stroke" Value="#F59E0B"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Border" Binding="{Binding Status}" Value="Rejected">
+                                            <Setter Property="BackgroundColor" Value="#1E0D0D"/>
+                                            <Setter Property="Stroke" Value="#EF4444"/>
+                                        </DataTrigger>
+                                    </Border.Triggers>
+                                    <Label Text="{Binding Status}" FontAttributes="Bold" FontSize="11">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="Pending">
+                                                <Setter Property="TextColor" Value="#F59E0B"/>
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="Rejected">
+                                                <Setter Property="TextColor" Value="#EF4444"/>
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </Border>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

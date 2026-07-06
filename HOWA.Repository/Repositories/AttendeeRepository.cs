@@ -57,7 +57,7 @@ namespace HOWA.Repository.Repositories
                 SELECT a.*, u.* 
                 FROM {DbConstants.TableAttendees} a 
                 INNER JOIN {DbConstants.TableUsers} u ON a.UserId = u.UserId 
-                WHERE a.Status = 'Pending'";
+                WHERE a.Status IN ('Pending', 'Rejected')";
 
             using (var db = CreateConnection())
             {

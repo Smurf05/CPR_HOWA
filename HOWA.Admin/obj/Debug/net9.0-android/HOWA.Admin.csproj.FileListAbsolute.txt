@@ -1995,3 +1995,4 @@ C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-android\stamp\_ConvertR
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-android\HOWA.Admin.sourcelink.json

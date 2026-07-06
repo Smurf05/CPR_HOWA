@@ -707,3 +707,4 @@ C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-ios\iossimulator-x64\HO
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-ios\iossimulator-x64\HOWA.Admin.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-ios\iossimulator-x64\ref\HOWA.Admin.dll
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
+C:\Users\LENOVO\Desktop\HOWA\HOWA.Admin\obj\Debug\net9.0-ios\iossimulator-x64\HOWA.Admin.sourcelink.json

@@ -716,3 +716,4 @@ C:\Users\LENOVO\Desktop\HOWA\HOWA.Mobile\bin\Debug\net9.0-ios\iossimulator-x64\M
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Mobile\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Mobile\bin\Debug\net9.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Users\LENOVO\Desktop\HOWA\HOWA.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\build-signature\signature
+C:\Users\LENOVO\Desktop\HOWA\HOWA.Mobile\obj\Debug\net9.0-ios\iossimulator-x64\HOWA.Mobile.sourcelink.json

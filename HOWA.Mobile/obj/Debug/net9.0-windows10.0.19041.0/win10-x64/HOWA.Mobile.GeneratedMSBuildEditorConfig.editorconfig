@@ -64,6 +64,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Mobile.Views.LoginPag
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
+[C:/Users/LENOVO/Desktop/HOWA/HOWA.Mobile/Views/OtpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Mobile.Views.OtpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\OtpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\OtpPage.xaml
+
 [C:/Users/LENOVO/Desktop/HOWA/HOWA.Mobile/Views/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HOWA.Mobile.Views.ProfilePage.xaml
